@@ -1,3 +1,41 @@
+/* NavBar collapse */
+#Sidebar {
+    width: 100px;
+    height: 100%;
+    background-image:linear-gradient(rgba(0, 0, 0, 0.846),#2a2929e3);
+    color: #fff;
+    padding: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: width 1s;
+}
+
+#Sidebar ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#Sidebar ul li {
+    margin-bottom: 10px;
+}
+
+#Sidebar ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    display: block;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#Sidebar ul li a:hover {
+    background-color: #444;
+}
+
+
+/* NavBar open */
 #sidebar {
     width: 200px;
     height: 100%;
@@ -7,6 +45,7 @@
     position: fixed;
     top: 0;
     left: 0;
+    transition: width 1s;
 }
 
 #sidebar ul {
@@ -22,7 +61,7 @@
 #sidebar ul li a {
     text-decoration: none;
     color: #fff;
-    font-size: 18px;
+    font-size: 16px;
     display: block;
     padding: 10px;
     border-radius: 5px;
@@ -32,19 +71,21 @@
     background-color: #444;
 }
 
+/* MainContent */
+
 #main-content {
-    margin-left: 200px;
+  margin-left: 100px;
 }
 .title{
     padding: 5px;
     background-color: #333;
     height: auto;
-    width: 100%;
 }
 .title p{
     position: relative;
     top: 5px;
-    left: 31%;
+    left: 39%;
+    width: 128px;
 }
 /* #content{
     margin-left: 220px;
@@ -53,5 +94,70 @@
     font-family: "Protest Guerrilla", sans-serif;
     font-weight: 400;
     font-style: normal;
+  }
+
+/* toggle button */
+#checkbox {
+    display: none;
+    padding-bottom: 30px;
+  }
+  
+  .toggle {
+    position: relative;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    gap: 10px;
+    transition-duration: .5s;
+  }
+  
+  .bars {
+    width: 100%;
+    height: 4px;
+    background-color: rgb(92, 130, 255);
+    border-radius: 4px;
+  }
+  
+  #bar2 {
+    transition-duration: .8s;
+  }
+  
+  #bar1 {
+    width: 50%;
+  }
+  
+  #bar2 {
+    width: 75%;
+  }
+  
+  #checkbox:checked + .toggle .bars {
+    position: absolute;
+    transition-duration: .5s;
+  }
+  
+  #checkbox:checked + .toggle #bar2 {
+    transform: scaleX(0);
+    transition-duration: .1s;
+  }
+  
+  #checkbox:checked + .toggle #bar1 {
+    width: 100%;
+    transform: rotate(45deg);
+    transition-duration: .5s;
+  }
+  
+  #checkbox:checked + .toggle #bar3 {
+    width: 100%;
+    transform: rotate(-45deg);
+    transition-duration: .5s;
+  }
+  
+  #checkbox:checked + .toggle {
+    transition-duration: .5s;
+    transform: rotate(180deg);
   }
   
