@@ -1,3 +1,39 @@
-.poster{
-    background-image: url("static/images/pexels-victorfreitas-841131.jpg");
+#carouselExample img{
+    width: auto;
+    height: 400px;
 }
+.quote{
+    position: absolute;
+    top: 19%;
+    left: 28%;
+}
+.quote span{
+    color: #f9ef23;
+}
+.start{
+    background-color: #f9ef23;
+    position: absolute;
+    top: 61%;
+    left: 42%;
+    height: 50px;
+    width: 182px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 3px;
+}
+.anton-regular {
+    font-family: "Anton SC", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    color: white;
+    font-size: 104px;
+}
+
+.hanken-grotesk {
+    font-family: "Hanken Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-size: 16px;
+  }
+  
