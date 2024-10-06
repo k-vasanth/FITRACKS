@@ -4,21 +4,128 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='home.css') }}">
     <link href="https://fonts.googleapis.com/css2?family=Anton&family=Anton+SC&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Anton&display=swap" rel="stylesheet">
+    <script src="{{ url_for('static', filename='js/home.js') }}"></script>
 {% endblock %}
 
 {% block body %}
-    <div id="carouselExample" class="carousel slide">
-        <div>
-            <img src="{{ url_for('static', filename='images/pexels-victorfreitas-841130.jpg') }}" class="d-block w-100" alt="...">
-            <p class="quote anton-regular fst-italic">BE YOUR <span>BEST</span></p>
-            <p class="start hanken-grotesk">Start Today</p>
+  <div id="enty">
+    <p class="quote anton-regular fst-italic">BE YOUR <span>BEST</span></p>
+    <p class="start hanken-grotesk">Start Today</p>
+  </div>
+  <div id="EXER" class="m-3 fs-1 anton-regular text-black">Exercises</div>
+  <div class=" my-5 d-flex">
+    <div class="Ecard mx-auto">
+      <div class="Ecard-details">
+        <img src="{{ url_for('static', filename='images/pexels-tima-miroshnichenko-5327487.jpg') }}" alt="">
+        <p class="Etext-title">DUMBLE ROWS</p>
+        <p class="Etext-body">Here are the details of the card</p>
+      </div>
+      <button class="Ecard-button">More info</button>
+    </div>
+    <div class="Ecard mx-auto">
+      <div class="Ecard-details">
+        <img src="{{ url_for('static', filename='images/pexels-scottwebb-136404.jpg') }}" alt="">
+        <p class="Etext-title">LEG EXTENSION</p>
+        <p class="Etext-body">Here are the details of the card</p>
+      </div>
+      <button class="Ecard-button">More info</button>
+    </div>
+    <div class="Ecard mx-auto">
+      <div class="Ecard-details">
+        <img src="{{ url_for('static', filename='images/pexels-leonardho-1552249.jpg') }}" alt="">
+        <p class="Etext-title">SQUATS</p>
+        <p class="Etext-body">Here are the details of the card</p>
+      </div>
+      <button class="Ecard-button">More info</button>
+    </div>
+    <div class="Ecard mx-auto">
+      <div class="Ecard-details">
+        <img src="{{ url_for('static', filename='images/pexels-pixabay-416754.jpg') }}" alt="">
+        <p class="Etext-title">DUMBLE PRESS</p>
+        <p class="Etext-body">Here are the details of the card</p>
+      </div>
+      <button class="Ecard-button">More info</button>
+    </div>
+    <button class="mx-auto fs-5 overflow-hidden" id="Ebt">
+      Explore More<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-arrow-right mx-2" viewBox="0 0 16 16">
+          <path fill-rule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8"/>
+          </svg>
+      </button>
+  </div>
+  <div id="split" class="m-3 fs-1 anton-regular text-black">EXPLORE POPULAR WORKOUT SPLITS</div>    
+  <div class="d-flex" id="max">
+      <div class="main">
+        <div class="card fs-1 anton-regular text-black" id="c1" onclick="changeId('c1')">Leg Day</div>
+        <div class="card fs-1 anton-regular text-black" id="c2" onclick="changeId('c2')">Pull Day</div>
+        <div class="card fs-1 anton-regular text-black" id="c3" onclick="changeId('c3')">Push Day</div>
+      </div>
+      <div class="main" id="PPL">
+        <p id="Title" class="anton-regular fs-1 text-info">Push day</p>
+        <p id="content" class="playwrite-de-grund text-light">Push day focuses on strengthening the muscles in your chest, shoulders, and triceps. Exercises like bench presses, overhead presses, and triceps extensions are common on this day. By targeting these muscle groups, you can build upper body strength and definition.</p>
+      </div>
+  </div>
+  <button class="m-4" id="WRbtn">
+    <span> PERSONALIZE YOUR WORKOUT ROUTINE
+    </span>
+  </button>
+  <div class="m-3 d-flex">
+    <div class="hcard mx-1 my-5">
+      <img src="{{ url_for('static', filename='images/pexels-gabby-k-5384536.jpg') }}" alt="">
+      <div class="card__content">
+        <p class="card__title fs-5">Meditation and Bodybuilding</p>
+        <p class="card__description">Meditation, often associated with relaxation, can be a game-changer in bodybuilding. It helps reduce stress, improve focus, and enhance sleep quality. By calming the mind, meditation can prevent overtraining and injuries. It also fosters a positive mindset, essential for staying motivated and committed to your fitness goals.</p>
+      </div>
+    </div>
+    <div class="hcard mx-1">
+      <img src="{{ url_for('static', filename='images/pexels-allan-mas-5383501.jpg') }}" alt="">
+      <div class="card__content">
+        <p class="card__title">Wall Climbing
+        </p><p class="card__description">Wall climbing is a fantastic cardio workout. It engages your entire body, especially your arms, legs, and core. The constant movement and weight-bearing challenge your cardiovascular system, improving endurance and strength.</p>
+      </div>
+    </div>
+    <div class="hcard mx-1 my-4">
+      <img src="{{ url_for('static', filename='images/pexels-marcuschanmedia-18060118.jpg') }}" alt="">
+      <div class="card__content">
+        <p class="card__title">Muscle Growth
+        </p><p class="card__description">Muscle growth, or hypertrophy, is a process where muscle fibers increase in size. It occurs through resistance training, which places stress on the muscles, causing them to adapt by growing stronger and larger. Adequate nutrition, especially protein, is essential for this process.</p>
+      </div>
+    </div>
+    <div class="hcard mx-1 my-2">
+      <img src="{{ url_for('static', filename='images/pexels-sinileunen-5496591.jpg') }}" alt="">
+      <div class="card__content">
+        <p class="card__title">Rest Between Sets</p>
+        <p class="card__description">Rest between sets is crucial for optimal muscle growth and performance. It allows your muscles to recover and replenish energy stores. Adequate rest prevents fatigue, improves form, and reduces the risk of injuries. By taking short breaks, you can maximize your workout and achieve better results.</p>
+      </div>
+    </div>
+  </div>
+  <div id="family" class="d-flex bg-black bg-gradient">
+    <div class="con" id="text">
+      <div>
+        <p id="Title" class="anton-regular fs-1 fst-italic">ABOUT OUR FIT <br>FAMILY</p>
+        <p class="text-light mukta-regular fs-5"><span class="fw-bold fs-3 text-success">FITRACKS</span> offers you the guidance through your path to be <span class="fw-bold fs-4 text-info">FIT</span>. We provide many specialized features that can makes you fitness journey convienient.</p>
+      </div>
+    </div>
+    <div class="con d-flex flex-column-reverse" id="image">
+      <img class="infoImg" id="infoImg1" src="{{ url_for('static', filename='images/pexels-marcuschanmedia-18060118.jpg') }}" alt="">
+      <img class="infoImg" id="infoImg2" src="{{ url_for('static', filename='images/pexels-shkrabaanthony-4662349.jpg') }}" alt="">
+    </div>
+  </div>
+  <div class="d-flex word">
+        <div class="qcard">
+          <div class="card-name">Words of wisdom</div>
+          <div class="quotes">
+            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 330 307" height="80" width="80">
+              <path fill="currentColor" d="M302.258 176.221C320.678 176.221 329.889 185.432 329.889 203.853V278.764C329.889 297.185 320.678 306.395 302.258 306.395H231.031C212.61 306.395 203.399 297.185 203.399 278.764V203.853C203.399 160.871 207.902 123.415 216.908 91.4858C226.323 59.1472 244.539 30.902 271.556 6.75027C280.562 -1.02739 288.135 -2.05076 294.275 3.68014L321.906 29.4692C328.047 35.2001 326.614 42.1591 317.608 50.3461C303.69 62.6266 292.228 80.4334 283.223 103.766C274.626 126.69 270.328 150.842 270.328 176.221H302.258ZM99.629 176.221C118.05 176.221 127.26 185.432 127.26 203.853V278.764C127.26 297.185 118.05 306.395 99.629 306.395H28.402C9.98126 306.395 0.770874 297.185 0.770874 278.764V203.853C0.770874 160.871 5.27373 123.415 14.2794 91.4858C23.6945 59.1472 41.9106 30.902 68.9277 6.75027C77.9335 -1.02739 85.5064 -2.05076 91.6467 3.68014L119.278 29.4692C125.418 35.2001 123.985 42.1591 114.98 50.3461C101.062 62.6266 89.6 80.4334 80.5942 103.766C71.9979 126.69 67.6997 150.842 67.6997 176.221H99.629Z"></path>
+            </svg>
+          </div>
+          <div class="body-text">The way to get started is to quit talking and begin doing.</div>
+          <div class="author">- by Walt Disney <br> <svg width="18" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M0 0H24V24H0z" fill="none"></path><path d="M16.5 3C19.538 3 22 5.5 22 9c0 7-7.5 11-10 12.5C9.5 20 2 16 2 9c0-3.5 2.5-6 5.5-6C9.36 3 11 4 12 5c1-1 2.64-2 4.5-2z"></path></svg>
+          </div>
         </div>
-    </div>
-    <div class="container">
-        <img src="{{ url_for('static', filename='images/Screenshot 2024-09-23 222338.png') }}" class="img-thumbnail" alt="...">
-    </div>
+  </div>
 {% endblock %}
 
 {% block script %}
-    <script src="{{ url_for('static', filename='home.js') }}"></script>
+    
 {% endblock %}

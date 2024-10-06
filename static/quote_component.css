@@ -1,0 +1,81 @@
+/* Quote card */ 
+.word{
+    background-image: url("images/pexels-tima-miroshnichenko-6390240.jpg");
+    height: 600px;
+    width: auto;
+    background-size: cover;
+}
+.qcard {
+    width: 314px;
+    height: 316px;
+    background: rgb(183, 226, 25);
+    font-family: inherit;
+    position: relative;
+    border-radius: 8px;
+    margin: 7% 0px 0px 12%;
+  }
+  .qcard:hover{
+    rotate: 5deg;
+    transition: rotate 0.5s;
+  }
+  
+  .quotes {
+    color: rgb(223, 248, 134);
+    padding-left: 100px;
+    position: relative;
+    padding-top: 18px;
+  }
+  
+  .card-name {
+    text-transform: uppercase;
+    font-weight: 700;
+    color: rgb(127, 155, 29);
+    padding: 35px;
+    line-height: 23px;
+  }
+  
+  .body-text {
+    font-size: 20px;
+    font-weight: 900;
+    padding: 60px 40px 0;
+    color: #465512;
+    position: absolute;
+    top: 40px;
+    left: 1px;
+    line-height: 23px;
+  }
+  
+  .author {
+    margin-top: 5px;
+    opacity: 0;
+    transition: 0.5s;
+  }
+  
+  .qcard:hover .author {
+    opacity: 1;
+  }
+  
+  .pic {
+    width: 50px;
+    height: 50px;
+    background-color: rgb(158, 196, 21);
+    border-radius: 50%;
+  }
+  
+  .author-container {
+    display: flex;
+    align-items: center;
+  }
+  
+  .author {
+    font-weight: 700;
+    color: rgb(0, 0, 0);
+    padding-left: 30px;
+    margin-top: 40px;
+  }
+  
+  .qcard .author svg {
+    /* display: inline; */
+    font-size: 12px;
+    color: rgba(128, 155, 29, 0.452);
+  }
