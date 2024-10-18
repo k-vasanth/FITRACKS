@@ -5,3 +5,4 @@ git commit -m "first commit"
 git branch -M main
 git remote add origin https://github.com/shashi2002/FITRACKS.git
 git push -u origin main
+{{ url_for('static', filename='images/pexels-victorfreitas-841130.jpg') }}
